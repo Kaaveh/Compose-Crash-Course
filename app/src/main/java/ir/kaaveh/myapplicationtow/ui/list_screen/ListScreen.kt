@@ -12,6 +12,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import ir.kaaveh.myapplicationtow.ui.list_screen.component.NameItem
 
 val names = listOf("aaa", "bbb", "cccc", "dddd")
 
@@ -21,11 +23,12 @@ fun ListScreen(
 ) {
 
     LazyColumn(
-        modifier = Modifier.fillMaxSize()
-            .padding(36.dp),
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(16.dp),
     ) {
-        items(items = nameList){
-            Text(text = it)
+        items(items = nameList) {
+            NameItem(name = it)
         }
     }
 

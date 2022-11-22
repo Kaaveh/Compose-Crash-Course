@@ -13,6 +13,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import ir.kaaveh.myapplicationtow.ui.list_screen.ListScreen
 import ir.kaaveh.myapplicationtow.ui.main.MainScreen
 import ir.kaaveh.myapplicationtow.ui.theme.MyApplicationTowTheme
 
@@ -24,7 +25,7 @@ class MainActivity : ComponentActivity() {
                 Surface(
                     modifier = Modifier.fillMaxSize()
                 ) {
-                    MainScreen()
+                    ListScreen()
                 }
             }
         }
