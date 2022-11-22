@@ -3,6 +3,9 @@ package ir.kaaveh.myapplicationtow.ui.main
 import android.content.res.Configuration.UI_MODE_NIGHT_UNDEFINED
 import android.content.res.Configuration.UI_MODE_NIGHT_YES
 import android.widget.Toast
+import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.*
 import androidx.compose.runtime.*
@@ -32,8 +35,16 @@ fun MainScreen() {
             mutableStateOf(true)
         }
 
-        if (isVisible)
+        AnimatedVisibility(
+            visible = isVisible,
+            enter = fadeIn(),
+            exit = fadeOut(),
+        ) {
             Text(text = message)
+        }
+
+//        if (isVisible)
+//            Text(text = message)
 
         Spacer(modifier = Modifier.height(32.dp))
 
