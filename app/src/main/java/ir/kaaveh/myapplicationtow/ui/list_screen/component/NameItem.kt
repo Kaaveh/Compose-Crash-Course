@@ -11,10 +11,12 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import ir.kaaveh.myapplicationtow.ui.list_screen.Person
+import ir.kaaveh.myapplicationtow.domain.model.Person
+import ir.kaaveh.myapplicationtow.ui.preview_provider.PersonProvider
 
 @Composable
 fun NameItem(
@@ -23,17 +25,17 @@ fun NameItem(
     onPersonCheckedChange: (personName: String) -> Unit,
 ) {
 
-    var backgroundColor by remember {
-        mutableStateOf(Color.White)
-    }
+//    var backgroundColor by remember {
+//        mutableStateOf(Color.White)
+//    }
 
     Column(
         modifier = Modifier
             .fillMaxWidth()
-            .background(backgroundColor)
-            .clickable {
-                backgroundColor = Color.Red
-            }
+//            .background(backgroundColor)
+//            .clickable {
+//                backgroundColor = Color.Red
+//            }
     ) {
         Spacer(modifier = Modifier.height(4.dp))
         Row(
@@ -59,6 +61,9 @@ fun NameItem(
 
 @Preview(showBackground = true)
 @Composable
-private fun NameItemPrev() {
-    NameItem(person = Person("Kaaveh", false), onPersonCheckedChange = {})
+private fun NameItemPrev(
+    @PreviewParameter(PersonProvider::class)
+    person: Person,
+) {
+    NameItem(person = person, onPersonCheckedChange = {})
 }
