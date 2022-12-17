@@ -5,7 +5,7 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import ir.kaaveh.myapplicationtow.ui.list_screen.ListScreen
+import ir.kaaveh.list.ListScreen
 import ir.kaaveh.myapplicationtow.ui.profile.ProfileScreen
 
 @Composable

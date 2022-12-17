@@ -11,7 +11,7 @@ import androidx.navigation.compose.rememberNavController
 import ir.kaaveh.myapplicationtow.navigation.AppNavHost
 import ir.kaaveh.myapplicationtow.navigation.BottomNavigationBar
 import ir.kaaveh.myapplicationtow.navigation.bottomNavItems
-import ir.kaaveh.myapplicationtow.ui.theme.MyApplicationTowTheme
+import ir.kaaveh.designsystem.theme.MyApplicationTowTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -14,3 +14,7 @@ dependencyResolutionManagement {
 }
 rootProject.name = "My Application tow"
 include ':app'
+include ':feature:profile'
+include ':feature:list'
+include ':library:designsystem'
+include ':domain:person'
