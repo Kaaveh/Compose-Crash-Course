@@ -7,6 +7,7 @@ import androidx.compose.ui.graphics.vector.ImageVector
 
 sealed class Destination(val route: String, val icon: ImageVector){
     object ProfileScreen : Destination("profile", Icons.Default.AccountCircle)
+    object SecondScreen : Destination("second", Icons.Default.AccountCircle)
     object ListScreen : Destination("List", Icons.Default.Home)
 }
 

@@ -6,7 +6,8 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import ir.kaaveh.list.ListScreen
-import ir.kaaveh.myapplicationtow.ui.profile.ProfileScreen
+import ir.kaaveh.profile.ProfileScreen
+import ir.kaaveh.profile.SecondScreen
 
 @Composable
 fun AppNavHost(navController: NavHostController, modifier: Modifier) {
@@ -19,7 +20,16 @@ fun AppNavHost(navController: NavHostController, modifier: Modifier) {
             ListScreen()
         }
         composable(Destination.ProfileScreen.route) {
-            ProfileScreen()
+            ProfileScreen(
+                onNavigationToSecondScreen = {
+                    navController.navigate(
+                        route = Destination.SecondScreen.route,
+                    )
+                }
+            )
+        }
+        composable(Destination.SecondScreen.route) {
+            SecondScreen()
         }
     }
 }
