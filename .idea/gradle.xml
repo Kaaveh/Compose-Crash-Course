@@ -18,6 +18,7 @@
             <option value="$PROJECT_DIR$/feature/profile" />
             <option value="$PROJECT_DIR$/library" />
             <option value="$PROJECT_DIR$/library/designsystem" />
+            <option value="$PROJECT_DIR$/library/navigation" />
           </set>
         </option>
       </GradleProjectSettings>

@@ -1,4 +1,4 @@
-package ir.kaaveh.myapplicationtow.navigation
+package ir.kaaveh.myapplicationtow.ui.main.component
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.layout.Column
@@ -10,12 +10,13 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.sp
+import ir.kaaveh.navigation.BottomNavItem
 
 @Composable
 fun BottomNavigationBar(
-    items: List<Destination>,
+    items: List<BottomNavItem>,
     currentScreenRoute: String?,
-    onItemClick: (Destination) -> Unit,
+    onItemClick: (BottomNavItem) -> Unit,
 ) {
     BottomNavigation {
         items.forEach { item ->
